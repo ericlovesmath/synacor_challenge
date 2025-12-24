@@ -8,7 +8,11 @@
 - JyDQhSbkpyns (after teleporter)
 ```
 
-# NOTES
+# Notes
+
+## The Beginning
+
+Code is written on tablet, find the ladder
 
 ## Start of [ladder] to find lantern
 
@@ -37,7 +41,11 @@ x> south       North above, You are in a maze of little twisty passages, all ali
       x> south (loop)
 ```
 
+Lantern is now lit, so we can traverse into the darkness
+
 ## Coins in Door
+
+Coins must be collected to put in the door in the right order
 
 - Hint: `_ + _ * _^2 + _^3 - _ = 399`
 - Corroded Coin: This coin is somewhat corroded.  It has a triangle on one side.
