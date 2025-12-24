@@ -1,0 +1,3 @@
+(executable
+ (public_name synacor_challenge)
+ (name main))
