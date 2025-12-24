@@ -176,7 +176,7 @@ let rec run pc =
     let a = read (pc + 1) in
     dbg [%message "in" (a : loc)];
     Out_channel.flush stdout;
-    let c = Char.of_string In_channel.(input_line_exn stdin) in
+    let c = Option.value_exn In_channel.(input_char stdin) in
     storage.registers.(reg_of a) <- Char.to_int c;
     run (pc + 2)
   | Imm 21 -> run (pc + 1)
