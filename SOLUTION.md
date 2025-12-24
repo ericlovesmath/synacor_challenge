@@ -12,6 +12,7 @@
 
 ## Start of [ladder] to find lantern
 
+```
 x> east        You are in a maze of alike little passages, all twisty.
   x> north     You are in a maze of alike twisty passages, all little.
     x> south   (back to east below)
@@ -34,6 +35,26 @@ x> south       North above, You are in a maze of little twisty passages, all ali
     x> east    You are in a twisty maze of little passages, all alike.
       x> north (loop)
       x> south (loop)
+```
+
+## Coins in Door
+
+- Hint: `_ + _ * _^2 + _^3 - _ = 399`
+- Corroded Coin: This coin is somewhat corroded.  It has a triangle on one side.
+- Shiny Coin: This coin is somehow still quite shiny.  It has a pentagon on one side.
+- Blue Coin: This coin is made of a blue metal.  It has nine dots on one side.
+- Concave Coin: This coin is slightly rounded, almost like a tiny bowl.  It has seven dots on one side.
+
+```python
+from itertools import permutations
+
+for (a, b, c, d, e) in permutations([2, 3, 5, 9, 7]):
+    if a + b * c * c + d * d * d - e == 399:
+        print(a, b, c, d, e)
+```
+
+- Output: 9 2 5 7 3
+- Order: blue, red, shiny, concave, corroded
 
 # Raw Cumulative Input
 
